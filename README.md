@@ -9,5 +9,5 @@ SGBlog博客系统-前端代码仓库
 
 
 
-配套的后端代码：https://github.com/sangengcaotang/SGBlog
+配套的后端代码：https://gitee.com/sangengcaotang/sgblog
 
