@@ -43,7 +43,7 @@
                             <header>
                                 <img  :src="$store.state.errorImg"  :onerror="$store.state.errorImg">
                                 <div class="i-name">
-                                    {{item.username}}
+                                    {{item.userName}}
                                 </div>
                                 <!-- <div class="i-class">
                                     {{item.label}}
@@ -65,7 +65,7 @@
                                     <header>
                                             <img :src="$store.state.errorImg"  :onerror="$store.state.errorImg">
                                             <div class="i-name">
-                                                {{citem.username}} <span>回复</span> {{citem.toCommentUserName}}
+                                                {{citem.userName}} <span>回复</span> {{citem.toCommentUserName}}
                                             </div>
                                             <div class="i-time">
                                                 <time>{{citem.createTime}}</time>
@@ -313,7 +313,12 @@
               }else{//其他评论
                     if(that.$route.name == 'FriendsLink'){
                       that.type = 1
-                      getLinkComment(that.queryParams).then((response)=>{
+                      let newquery = {
+                          pageNum: that.queryParams.pageNum,
+                          pageSize: that.queryParams.pageSize,
+                    
+                      }
+                      getLinkComment(newquery).then((response)=>{
                           that.setData(initData,response);
                       })
                   }

@@ -15,7 +15,7 @@
                             <span class="leftTitle">头像</span>
                             <el-upload
                               class="avatar-uploader"
-                              name="img"
+                              name="file"
                               :action="uploadURL"
                               :show-file-list="false"
                               :on-success="handleAvatarSuccess"
@@ -106,7 +106,7 @@ import store from '../store'
             handleAvatarSuccess(res, file) {//上传头像
                 if(res.code == 200){
                     this.userInfoObj.avatar = res.data;
-                    this.userInfoObj.head_start = 1;
+                    // this.userInfoObj.head_start = 1;
                 }else{
                     this.$message.error('上传图片失败');
                 }
@@ -148,8 +148,10 @@ import store from '../store'
                     that.userInfo = JSON.parse(localStorage.getItem('userInfo'));
                     that.userId = that.userInfo.id;
                     getUserInfo(that.userId).then((response)=>{
+                        delete response.id;
                         that.userInfoObj = response;
-                        that.userInfoObj.head_start = 0;
+                
+                        // that.userInfoObj.head_start = 0;
                     })
                 }else{
                     that.haslogin = false;
@@ -166,7 +168,7 @@ import store from '../store'
          },
         created() { //生命周期函数
             this.routeChange();
-            this.uploadURL = store.state.baseURL+'upload'
+            this.uploadURL = store.state.baseURL+'/upload'
         }
     }
 </script>

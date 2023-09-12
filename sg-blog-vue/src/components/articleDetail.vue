@@ -65,6 +65,8 @@ import { mavonEditor } from 'mavon-editor'
             getArticleDetail:function(){
                 getArticle(this.aid).then((response)=>{
                     this.detailObj = response
+                    console.log(this.detailObj);
+                    console.log(response)
                      const markdownIt = mavonEditor.getMarkdownIt()
                     // markdownIt.re
                     this.detailObj.content = markdownIt.render(response.content);
@@ -72,7 +74,7 @@ import { mavonEditor } from 'mavon-editor'
             },
             routeChange:function(){
                 var that = this;
-                that.aid = that.$route.query.aid==undefined?1:parseInt(that.$route.query.aid);//获取传参的aid
+                that.aid = that.$route.query.aid==undefined?0:parseInt(that.$route.query.aid);//获取传参的aid
                 //判断用户是否存在
                 if(localStorage.getItem('userInfo')){
                     that.haslogin = true;

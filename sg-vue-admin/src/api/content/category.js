@@ -4,7 +4,7 @@ import downloadService from '@/utils/downloadService'
 // 查询分类列表
 export function listCategory(query) {
   return request({
-    url: '/content/category/list',
+    url: '/category/list',
     method: 'get',
     params: query
   })
@@ -13,14 +13,14 @@ export function listCategory(query) {
 // 查询分类列表
 export function listAllCategory() {
   return request({
-    url: '/content/category/listAllCategory',
+    url: '/category/all',
     method: 'get'
   })
 }
 // 查询分类详细
 export function getCategory(id) {
   return request({
-    url: '/content/category/' + id,
+    url: '/category/' + id,
     method: 'get'
   })
 }
@@ -28,7 +28,7 @@ export function getCategory(id) {
 // 新增分类
 export function addCategory(data) {
   return request({
-    url: '/content/category',
+    url: '/category',
     method: 'post',
     data: data
   })
@@ -37,7 +37,7 @@ export function addCategory(data) {
 // 修改分类
 export function updateCategory(data) {
   return request({
-    url: '/content/category',
+    url: '/category',
     method: 'put',
     data: data
   })
@@ -46,7 +46,7 @@ export function updateCategory(data) {
 // 删除分类
 export function delCategory(id) {
   return request({
-    url: '/content/category/' + id,
+    url: '/category/' + id,
     method: 'delete'
   })
 }

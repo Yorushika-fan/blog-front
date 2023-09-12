@@ -12,7 +12,7 @@ export function sendComment(type,articleId,rootId,toCommentId,toCommentUserId,co
 
 export function getArticleComment(query) {
     return request({
-        url: '/comment/commentList',
+        url: '/comment/list',
         method: 'get',
         headers: {
           isToken: false
@@ -24,8 +24,11 @@ export function getArticleComment(query) {
 
 export function getLinkComment(query) {
     return request({
-        url: '/comment/linkCommentList',
+        url: '/comment/link/list',
         method: 'get',
+        headers: {
+            isToken: false
+        },
         params: query
     })
 }

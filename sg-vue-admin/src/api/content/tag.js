@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 查询分类列表
 export function listTag(query) {
   return request({
-    url: '/content/tag/list',
+    url: '/tag/list',
     method: 'get',
     params: query
   })
@@ -12,14 +12,14 @@ export function listTag(query) {
 // 查询分类列表
 export function listAllTag() {
   return request({
-    url: '/content/tag/listAllTag',
+    url: '/tag/listAll',
     method: 'get'
   })
 }
 // 查询分类详细
 export function getTag(id) {
   return request({
-    url: '/content/tag/' + id,
+    url: '/tag/' + id,
     method: 'get'
   })
 }
@@ -27,7 +27,7 @@ export function getTag(id) {
 // 新增分类
 export function addTag(data) {
   return request({
-    url: '/content/tag',
+    url: '/tag',
     method: 'post',
     data: data
   })
@@ -36,7 +36,7 @@ export function addTag(data) {
 // 修改分类
 export function updateTag(data) {
   return request({
-    url: '/content/tag',
+    url: '/tag',
     method: 'put',
     data: data
   })
@@ -45,7 +45,7 @@ export function updateTag(data) {
 // 删除分类
 export function delTag(id) {
   return request({
-    url: '/content/tag/' + id,
+    url: '/tag/' + id,
     method: 'delete'
   })
 }

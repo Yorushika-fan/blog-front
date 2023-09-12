@@ -178,8 +178,8 @@ import {setToken} from '../utils/auth.js'
             },
             newRegister:function(){//注册提交
                 var that = this;
-                var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/ ;
-                var preg = /^(\w){6,12}$/;
+                var reg = /^(?![a-zA-Z]+$)(?!\d+$)(?![^\da-zA-Z\s]+$)/ ;
+                var preg = /^(\w){6,20}$/;
                 if(that.nusername){
                     that.nusernameErr = false;
                 }else{

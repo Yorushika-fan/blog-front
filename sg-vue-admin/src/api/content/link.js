@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 查询友链列表
 export function listLink(query) {
   return request({
-    url: '/content/link/list',
+    url: '/link/list',
     method: 'get',
     params: query
   })
@@ -12,7 +12,7 @@ export function listLink(query) {
 // 查询友链详细
 export function getLink(id) {
   return request({
-    url: '/content/link/' + id,
+    url: '/link/' + id,
     method: 'get'
   })
 }
@@ -31,7 +31,7 @@ export function changeLinkStatus(id, newStatus) {
 // 新增友链
 export function addLink(data) {
   return request({
-    url: '/content/link',
+    url: '/link',
     method: 'post',
     data: data
   })
@@ -40,7 +40,7 @@ export function addLink(data) {
 // 修改友链
 export function updateLink(data) {
   return request({
-    url: '/content/link',
+    url: '/link',
     method: 'put',
     data: data
   })
@@ -49,7 +49,7 @@ export function updateLink(data) {
 // 删除友链
 export function delLink(id) {
   return request({
-    url: '/content/link/' + id,
+    url: '/link/' + id,
     method: 'delete'
   })
 }

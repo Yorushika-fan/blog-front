@@ -3,7 +3,7 @@
 // 查询文章列表
 export function articleList(query) {
     return request({
-        url: '/article/articleList',
+        url: '/article/pageList',
         method: 'get',
         headers: {
           isToken: false
@@ -15,7 +15,7 @@ export function articleList(query) {
 //查询最热文章
 export function hotArticleList() {
     return request({
-        url: '/article/hotArticleList',
+        url: '/article/hotList',
         headers: {
           isToken: false
         },
@@ -26,7 +26,7 @@ export function hotArticleList() {
 //获取文章详情
 export function getArticle(articleId) {
     return request({
-        url: '/article/' + articleId,
+        url: '/article/detail/' + articleId,
         headers: {
           isToken: false
         },

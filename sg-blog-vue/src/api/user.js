@@ -8,7 +8,7 @@ export function userLogin(username,password) {
         headers: {
             isToken: false
           },
-        data: {'username':username,'password':password}
+        data: {'userName':username,'password':password}
     })
 }
 
@@ -19,7 +19,7 @@ export function userRegister(username,nickName,email,password) {
         headers: {
             isToken :false
         },
-        data: {"username":username,"nickName":nickName,"email":email,"password":password}
+        data: {"userName":username,"nickName":nickName,"email":email,"password":password}
     })
 }
 
@@ -33,16 +33,15 @@ export function logout() {
 
 export function getUserInfo(userId) {
     return request ({
-        url: '/user/userInfo',
-        method: 'get',
-        params: {"userId":userId}
+        url: '/user',
+        method: 'get'
     })
 }
 
 
 export function savaUserInfo(userinfo) {
     return request({
-        url: '/user/userInfo',
+        url: '/user',
         method: 'put',
         data: userinfo
     })

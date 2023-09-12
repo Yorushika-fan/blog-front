@@ -9,7 +9,7 @@ export function login(userName, password, code, uuid) {
     uuid
   }
   return request({
-    url: '/user/login',
+    url: '/login',
     headers: {
       isToken: false
     },
@@ -41,7 +41,7 @@ export function getInfo() {
 // 退出方法
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: '/logout',
     method: 'post'
   })
 }

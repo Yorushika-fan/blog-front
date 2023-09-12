@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 查询文章列表
 export function addArticle(data) {
   return request({
-    url: '/content/article',
+    url: '/article',
     method: 'post',
     data: data
   })
@@ -12,7 +12,7 @@ export function addArticle(data) {
 // 查询文章列表
 export function listArticle(query) {
   return request({
-    url: '/content/article/list',
+    url: '/article/list',
     method: 'get',
     params: query
   })
@@ -21,7 +21,7 @@ export function listArticle(query) {
 // 删除文章
 export function delArticle(id) {
   return request({
-    url: '/content/article/' + id,
+    url: '/article/' + id,
     method: 'delete'
   })
 }
@@ -29,7 +29,7 @@ export function delArticle(id) {
 // 查询分类详细
 export function getArticle(id) {
   return request({
-    url: '/content/article/' + id,
+    url: '/article/' + id,
     method: 'get'
   })
 }
@@ -37,7 +37,7 @@ export function getArticle(id) {
 // 修改分类
 export function updateArticle(data) {
   return request({
-    url: '/content/article',
+    url: '/article',
     method: 'put',
     data: data
   })
